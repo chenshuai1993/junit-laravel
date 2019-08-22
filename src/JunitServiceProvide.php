@@ -10,12 +10,9 @@ namespace Chenshuai1993\JunitLaravel;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Chenshuai1993\JunitLaravel\Http\Controllers\JunitController;
 
 class JunitServiceProvide extends ServiceProvider
 {
-    protected $defer = true;
-
     public function boot()
     {
         $this->registerRoutes();
@@ -24,20 +21,6 @@ class JunitServiceProvide extends ServiceProvider
             __DIR__.'/../resources/views', 'junit'
         );
 
-    }
-
-    public function register()
-    {
-        $this->app->singleton(JunitController::class, function(){
-            return new JunitController();
-        });
-
-        $this->app->alias(JunitController::class, 'Junit');
-    }
-
-    public function provides()
-    {
-        return [JunitController::class, 'Junit'];
     }
 
     private function routeConfiguration()

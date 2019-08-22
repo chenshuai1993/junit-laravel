@@ -1,0 +1,27 @@
+{
+    "name": "chenshuai1993\/junit-laravel",
+    "description": "A simplified version of the laravel framework unit test",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shuaishuai.chen",
+            "email": "sschend@isoftstone.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Chenshuai1993\\JunitLaravel\\": "src"
+        }
+    },
+    "require-dev": {
+        "laravel/telescope": "^2.0"
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "Chenshuai1993\\JunitLaravel\\JunitServiceProvide"
+        ]
+    }
+}
+}

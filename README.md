@@ -11,7 +11,11 @@ $ composer require chenshuai1993/junit-laravel -vvv
 
 ## Usage
 
-TODO
+然后在浏览器中直接访问路由
+```$xslt
+Route::get('/', 'SJunitController@index');
+Route::post('/', 'SJunitController@store')->name('junit.store');
+```
 
 ## Contributing
 
